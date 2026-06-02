@@ -21,7 +21,7 @@ Displays temperature, humidity, and weather condition
 Simple and clean UI
 Beginner-friendly and fast response
 
-🛠 Tools & Technologies
+🛠 Tools & Technologies:
 Python
 Streamlit
 Requests / Weather API
