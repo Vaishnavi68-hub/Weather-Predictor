@@ -3,25 +3,20 @@ import joblib
 import numpy as np
 import base64
 
-# ---------------- LOAD MODEL ----------------
 model = joblib.load("weather_model.pkl")
 le = joblib.load("label_encoder.pkl")
-
-# ---------------- PAGE CONFIG ----------------
 st.set_page_config(
     page_title="Weather Forecast App",
     page_icon="🌤️",
     layout="wide"
 )
 
-# ---------------- LOAD BACKGROUND IMAGE ----------------
 def get_base64(file_path):
     with open(file_path, "rb") as f:
         return base64.b64encode(f.read()).decode()
 
 img = get_base64("weather_bg.jpg")
 
-# ---------------- FULL UI STYLING ----------------
 st.markdown(f"""
 <style>
 
@@ -110,12 +105,10 @@ header {{
 </style>
 """, unsafe_allow_html=True)
 
-# ---------------- TITLE ----------------
 st.markdown("<div class='title'>🌤️ Weather Forecast Dashboard</div>", unsafe_allow_html=True)
 
 st.write("Predict temperature using your ML model")
 
-# ---------------- INPUT SECTION ----------------
 st.markdown("<div class='glass'>", unsafe_allow_html=True)
 
 col1, col2 = st.columns(2)
@@ -131,7 +124,6 @@ with col2:
 
 st.markdown("</div>", unsafe_allow_html=True)
 
-# ---------------- PREDICTION ----------------
 st.markdown("<div class='glass'>", unsafe_allow_html=True)
 
 if st.button("🔮 Predict Weather"):
