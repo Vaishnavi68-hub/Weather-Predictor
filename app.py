@@ -20,7 +20,6 @@ img = get_base64("weather_bg.jpg")
 st.markdown(f"""
 <style>
 
-/* ===== BACKGROUND IMAGE ===== */
 .stApp {{
     background: url("data:image/jpg;base64,{img}");
     background-size: cover;
@@ -28,7 +27,6 @@ st.markdown(f"""
     background-attachment: fixed;
 }}
 
-/* ===== REMOVE STREAMLIT HEADER BACKGROUND ===== */
 header {{
     background: transparent !important;
 }}
@@ -42,7 +40,6 @@ header {{
     display: none;
 }}
 
-/* ===== DARK OVERLAY FOR READABILITY ===== */
 .stApp::before {{
     content: "";
     position: absolute;
@@ -53,13 +50,11 @@ header {{
     z-index: 0;
 }}
 
-/* KEEP CONTENT ABOVE BACKGROUND */
 .block-container {{
     position: relative;
     z-index: 1;
 }}
 
-/* ===== TITLE ===== */
 .title {{
     font-size: 46px;
     font-weight: 700;
@@ -69,7 +64,6 @@ header {{
     text-shadow: 0px 5px 20px rgba(0,0,0,0.6);
 }}
 
-/* ===== GLASS CARD ===== */
 .glass {{
     background: rgba(255, 255, 255, 0.12);
     border-radius: 20px;
@@ -85,7 +79,6 @@ header {{
     margin-top: 15px;
 }}
 
-/* ===== BUTTON ===== */
 .stButton > button {{
     width: 100%;
     background: rgba(255,255,255,0.15);
